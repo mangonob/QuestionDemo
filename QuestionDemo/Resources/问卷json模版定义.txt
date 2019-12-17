@@ -1,0 +1,289 @@
+问卷json模版定义:
+{
+    "content": "1.就诊科室:",
+    "answer": "内科-心血管内科",
+    "type": 1,
+    "child": []
+}
+
+此结构为题干和答案通用模版
+
+1.content为文字内容,可能是题干也可能是选项
+2.answer为答案内容
+3.type为类型
+4.child为子节点
+
+
+[
+{
+    "content": "1.就诊科室:",//题干
+    "answer": "内科-心血管内科",//答案
+    "type": 1,//科室选择题,显示输入框,点击底部弹出二三级科室联动滚轮选择器
+    "child": []
+},
+{
+    "answer": "1",//选中项的索引,代表当前题目选中child中索引为3的选项
+    "content": "(a) 您对医院工作人员的服务态度及服务效率是否满意",
+    "type": 2,//单选题
+    "child": [
+        {
+            "content": "非常满意",
+            "type": 6,//单选项,无任何特殊意义
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "满意",
+            "type": 6,
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "一般",
+            "type": 6,
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "不满意",
+            "type": 6,
+            "answer": null,
+            "child": []
+        }
+    ]
+},
+{
+    "content": "(2) 在本次就诊中您最不满意的服务环节",
+    "type": 3,//多选题
+    "answer": “1,3”,//逗号拼接的索引,“1,3”代表选中索引为1和3的选项
+    "child": [
+        {
+            "content": "挂号",
+            "type": 6,
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "看诊",
+            "type": 6,
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "缴费",
+            "type": 6,
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "检查",
+            "type": 6,
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "取药",
+            "type": 6,
+            "answer": null,
+            "child": []
+        },
+        {
+            "content": "其他",
+            "type": 7,//输入框选项,选中弹出输入框
+            "answer": "医生态度很差",//答案
+            "child": []
+        }
+    ]
+},
+{
+    "content": "2.您对医院总体评价",
+    "answer":"3",
+    "type": 2,
+    "child": [
+        {
+            "content": "一般",
+            "answer": null,
+            "type": 4,//!!!!!重点.  4为题中题,无选项   此例代表选中一般时弹出关联题目,child为关联题目数组,关联题目"(1) 请对以下服务内容进行评价"
+            "child": [
+                {
+                    "content": "(1) 请对以下服务内容进行评价",
+                    "type": 12,//此题目也无选项,关联(a)(b)(c)(d)(e)五道题目,12跟4一样,多一个options字段,在题目下方显示该数组
+                    options:[
+                        "非常满意”,“满意”,“一般”,“不满意”,“非常不满意”
+                    ],
+                    "answer": null,
+                    "child": [
+                        {
+                            "answer": null,
+                            "content": "(a) 您对医院工作人员的服务态度及服务效率是否满意",
+                            "type": 13,//13跟2一样都是单选,但是13未选中只显示勾选框,选中才气泡提示content中的内容
+                            "child": [
+                                {
+                                    "content": "非常满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "一般",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "不满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                }
+                            ]
+                        },
+                        {
+                            "answer": null,
+                            "content": "(b) 您对医院的就诊环境、服务设施是否满意",
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "非常满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "一般",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "不满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                }
+                            ]
+                        },
+                        {
+                            "answer": null,
+                            "content": "(c) 您对接诊医生的技术水平是否满意",
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "非常满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "一般",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "不满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                }
+                            ]
+                        },
+                        {
+                            "answer": null,
+                            "content": "(d) 您对医务人员尊重患者隐私的情况是否满意",
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "非常满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "一般",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "不满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                }
+                            ]
+                        },
+                        {
+                            "answer": null,
+                            "content": "(e) 您对我院就医流程、指引标识清晰度是否满意",
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "非常满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "一般",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                },
+                                {
+                                    "content": "不满意",
+                                    "type": 6,
+                                    "answer": null,
+                                    "child": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+    ]
+},
+{
+    "content": "3.您对医院还有哪些意见与建议（无意见请填写“无”）"
+    "answer": "医生看病很慢",//答案
+    "type": 5,//输入区域题目,显示一个输入区域
+    "child": []
+},
+{
+    "content": "8.床号:"
+    "answer": "G1301",//答案
+    "type": 8,//输入框题目,样式跟type=1保持一致
+    "child": []
+}
+]

@@ -1,0 +1,1557 @@
+{
+    "sur_id": 2,
+    "sur_name": "心内科随访表",
+    "que_num": 18,
+    "preface": "感谢使用“武大云医”，以下问卷是针对您出院后的相关随访。后续我们会根据您的随访结果给您个性化的指导，武汉大学人民医院为您的健康保驾护航！\r\n请您根据出院当日至今的自身情况如实填写以下问题。",
+    "que_li": [
+        {
+            "content": "1、您此次住院的主要疾病是（可多选）",
+            "answer": null,
+            "type": 3,
+            "code": 1,
+            "child": [
+                {
+                    "content": "A.冠心病",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.高血压",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.心律失常（房颤、房扑、房室传导阻滞、房性早搏、房性心动过速、窦房传导阻滞、病态窦房结综合征、窦性心律不齐、室性早搏、室性心动过速、阵发性室上性心动过速等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.心功能不全",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.病毒性心肌炎",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "F.结构性心脏病（主动脉瓣狭窄/关闭不全、三尖瓣狭窄/关闭不全、二尖瓣狭窄/关闭不全、风湿性心脏病、动脉导管未闭、房间隔缺损、室间隔缺损等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "G.心肌病（扩张型、肥厚型、限制型心肌病等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "H.急性感染性心内膜炎",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "I.心包疾病（心包积液、心包炎、结核性心包炎、缩窄性心包炎、急性心包炎等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "J.其他（肺动脉高压、肺栓塞、周围血管疾病（下肢动/静脉血栓等））",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "2、您的饮食方式是（可多选）",
+            "answer": null,
+            "type": 3,
+            "code": 2,
+            "child": [
+                {
+                    "content": "A.低盐饮食（每日可用食盐不超过6克或酱油10ml/d）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.高盐饮食（每日可用食盐超过6克的饮食例如：酱菜、咸菜、腐乳、咸肉、咸鱼等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.低脂饮食（烤煮牛肉、羊肉、鸡肉、鱼类及其它海产品：鲤鱼、鲟鱼、蟹肉、虾、牡蛎等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.高脂饮食（油炸食品、肥肉、动物内脏、奶油制品）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.低蛋白饮食（每日蛋白质供给量约为每公斤体重0.5克）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "F.高蛋白饮食（奶、畜肉、禽肉、蛋类、鱼、虾等动物蛋白）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "G.低糖饮食（柚子、樱桃、苹果等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "H.高糖饮食（蜂蜜、白糖、红糖、面粉、甘蔗、地瓜、大枣、甜菜）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "I.低纤维饮食",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "J.高纤维饮食（粗粮食品、茭白、芹菜、苦瓜、芹菜、水果等）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "K.普通饮食",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "3、喝咖啡或浓茶等刺激性饮料的频率",
+            "answer": null,
+            "type": 2,
+            "code": 3,
+            "child": [
+                {
+                    "content": "A.未喝",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.偶尔",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.1-4次/周",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.5-7次/周",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.大于7次/周",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "4、饮酒的频率",
+            "answer": null,
+            "type": 2,
+            "code": 4,
+            "child": [
+                {
+                    "content": "A.每次>60ml纯酒精量（啤酒>520ml，葡萄酒>180ml，白酒>45ml）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.每次40-60ml纯酒精量（啤酒350-520ml，葡萄酒120-180ml，白酒30-45ml）",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.每次<40ml纯酒精量（啤酒350ml，葡萄酒120ml，白酒30ml）且经常饮酒",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.每次<40ml纯酒精量（啤酒350ml，葡萄酒120ml，白酒30ml）且偶尔饮酒",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.从不饮酒",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "5、您吸烟的频率（可多选）",
+            "answer": null,
+            "type": 3,
+            "code": 5,
+            "child": [
+                {
+                    "content": "A.从来不吸烟",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.偶尔吸烟",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.每日吸烟",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.经常吸烟",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.吸二手烟",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "6、是否受到过炎热、寒冷相关刺激",
+            "answer": null,
+            "type": 2,
+            "code": 6,
+            "child": [
+                {
+                    "content": "A.是",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.否",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "7、是否能合理规划工作、活动和休息",
+            "answer": null,
+            "type": 2,
+            "code": 7,
+            "child": [
+                {
+                    "content": "A.从来不",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.偶尔",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.有时",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.经常",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.总是",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "8、当您情绪低落时，自己或亲人朋友能鼓励您振作吗",
+            "answer": null,
+            "type": 2,
+            "code": 8,
+            "child": [
+                {
+                    "content": "A.从来不",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.偶尔",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.有时",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.经常",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.总是",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "9、当您紧张，激动时，能采用自我放松的技巧吗",
+            "answer": null,
+            "type": 2,
+            "code": 9,
+            "child": [
+                {
+                    "content": "A.从来不",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.偶尔",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.有时",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.经常",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.总是",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "10、睡眠情况如何？",
+            "answer": null,
+            "type": 2,
+            "code": 10,
+            "child": [
+                {
+                    "content": "A.睡眠很好，从不失眠",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.虽不失眠，但经常熬夜或早醒、易醒、多梦",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.失眠，每周1-2次",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.失眠，每月1-2次",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.长期失眠",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "11、是否出现便秘情况",
+            "answer": null,
+            "type": 2,
+            "code": 11,
+            "child": [
+                {
+                    "content": "A.是",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.否",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "12、在家自理情况",
+            "answer": null,
+            "type": 2,
+            "code": 12,
+            "child": [
+                {
+                    "content": "A.能够自理",
+                    "answer": null,
+                    "type": 4,
+                    "child":[
+                        {
+                            "content": "1、您认为下列运动方式哪些是有氧运动？（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.步行",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.快走",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.慢跑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.滑冰、轮滑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.长距离游泳",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.骑自行车",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "G.打太极拳",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "H.跳健身舞",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "I.跳绳/做韵律操",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "J.球类运动（篮球、足球、羽毛球、网球等）",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "K.短跑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "L.投掷",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "M.俯卧撑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "2、您最近坚持下列那些运动？（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.步行",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.快走",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.慢跑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.滑冰、轮滑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.长距离游泳",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.骑自行车",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "G.打太极拳",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "H.跳健身舞",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "I.跳绳/做韵律操",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "J.球类运动（篮球、足球、羽毛球、网球等）",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "K.短跑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "L.投掷",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "M.俯卧撑",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "3、您最近一周运动的时间是多少（做家务除外）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.每天坚持运动半小时",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.每天坚持运动至少1小时",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.3-5次/周，时间长短不一",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.3-5次/周,至少运动半小时",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.偶尔运动，时间长短不一",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.很少运动",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "B.穿衣、洗澡部分困难",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.不能自行穿衣洗澡",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "13、您是否在家定时测量血压",
+            "answer": null,
+            "type": 2,
+            "code": 13,
+            "child": [
+                {
+                    "content": "A.是",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.否",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "14、是否出现过以下症状（可多选）",
+            "answer": null,
+            "type": 3,
+            "code": 14,
+            "child": [
+                {
+                    "content": "A.无明显症状",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.胸痛",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.胸闷",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.气促",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.呼吸困难",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "F.口唇发紫色",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "G.水肿",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "H.乏力",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "I.咳嗽、咳痰",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "J.少尿",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "K.心慌",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "L.头晕",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "M.晕厥",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "N.视物模糊",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "O.烦躁",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "P.头痛",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "Q.面色苍白或模糊",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "R.其他（自行填写）",
+                    "answer": null,
+                    "type": 7, 
+                    "maxLength": 100,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "15、您最近服用药物是否完全按医嘱剂量及频率进行",
+            "answer": null,
+            "type": 2,
+            "code": 15,
+            "child": [
+                {
+                    "content": "A.完全按医嘱剂量，从不随意增加药物种类及剂量，从无漏服",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.偶尔忘记服药",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "C.经常忘记服药",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "D.根据自我感觉调整用药，自我感觉好时停止服药，出现头晕等症状时加服药物",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "E.无服药情况",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "16、您在服用药物期间是否有不良反应（与之前相比出现新的症状）",
+            "answer": null,
+            "type": 2,
+            "code": 16,
+            "child": [
+                {
+                    "content": "A.有",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.没有",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                }
+            ]
+        },
+        {
+            "content": "17、请问您在心内科做过以下手术吗？",
+            "answer": null,
+            "type": 3,
+            "code": 17,
+            "child": [
+                {
+                    "content": "A.无涉及",
+                    "answer": null,
+                    "type": 6,
+                    "child":[]
+                },
+                {
+                    "content": "B.心脏起搏器植入术",
+                    "answer": null,
+                    "type": 4,
+                    "child":[
+                        {
+                            "content": "1、是否知道起搏器术后肢体活动内容及注意事项",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "2、外出时您是否携带起搏器识别卡",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "3、是否在家自行监测心率",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "4、安装起搏器后出现过下列哪些症状（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.无症状",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.心慌",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.头晕",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.脉率过缓",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.晕厥",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.其他（自行填写）",
+                                    "answer": null,
+                                    "type": 7, 
+                                    "maxLength": 100,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "5、安装起搏器的手术部位发生过下列哪些情况（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.过度摩擦（衣物、安全带等）",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.外力碰撞",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.起搏器位置发红",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.起搏器位置发痒",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.起搏器位置发热",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.起搏器位置疼痛",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "G.起搏器位置流脓",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "H.未出现任何症状",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "I.其他（自行填写）",
+                                    "answer": null,
+                                    "type": 7, 
+                                    "maxLength": 100,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "6、生活中是否接近过高压电场或强磁场区域（变电站、变压器、接受核磁共振检查/电子理疗）",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "7、起搏器植入后您的症状是否有改善",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "8、请问您知道手机的携带方式和接听方式吗？",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "9、出院后是否按医嘱定期复查（包括检查起搏器电池寿命）",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "C.射频消融术",
+                    "answer": null,
+                    "type": 4,
+                    "child":[
+                        {
+                            "content": "1、出院回家后是否出现下列情况（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.伤口处有渗血",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.伤口处有肿胀或血肿",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.伤口处疼痛",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.出现头晕",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.心跳过快",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.心跳过慢",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "G.未出现任何情况感觉良好",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "H.其他（自行填写）",
+                                    "answer": null,
+                                    "type": 7, 
+                                    "maxLength": 100,
+                                    "child":[]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "D.冠脉介入手术（冠脉造影、冠脉造影支架植入术、冠状动脉腔内成形术）",
+                    "answer": null,
+                    "type": 4,
+                    "child":[
+                        {
+                            "content": "1、出院回家后是否出现下列情况（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.术侧肢体出现明显渗血",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.术侧肢体出现明显肿胀",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.术侧肢体出现明显青紫",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.术侧肢体出现疼痛",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.出现胸痛、胸闷等症状",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.未出现任何状况感觉良好",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "G.其他（自行填写）",
+                                    "answer": null,
+                                    "type": 7, 
+                                    "maxLength": 100,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "2、您冠脉介入手术出院后是否发生过心绞痛（心前区胸闷、胸痛等不适）",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 4,
+                                    "child":[
+                                        {
+                                            "content": "1、 心绞痛发作的频率是",
+                                            "answer": null,
+                                            "type": 2,
+                                            "child":[
+                                                {
+                                                    "content": "A.每天发作<3次",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "B.每天发作>3次",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "C.每周发作3-5次",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "D.每月发作3-5次",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "content": "2、 出院这段时间内，当心绞痛发作时您能识别并及时处理吗？",
+                                            "answer": null,
+                                            "type": 2,
+                                            "child":[
+                                                {
+                                                    "content": "A.从来不",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "B.偶尔",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "C.有时",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "D.经常",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "E.总是",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.其他（自行填写）",
+                                    "answer": null,
+                                    "type": 7, 
+                                    "maxLength": 100,
+                                    "child":[]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "content": "E.左心耳封堵术",
+                    "answer": null,
+                    "type": 4,
+                    "child":[
+                        {
+                            "content": "1、您是否服用华法林",
+                            "answer": null,
+                            "type": 2,
+                            "child": [
+                                {
+                                    "content": "A.是",
+                                    "answer": null,
+                                    "type": 4,
+                                    "child":[
+                                        {
+                                            "content": "1、 是否知道服用华法林要定期监测INR（国际标准化比值）",
+                                            "answer": null,
+                                            "type": 2,
+                                            "child": [
+                                                {
+                                                    "content": "A.是",
+                                                    "answer": null,
+                                                    "type": 4,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "B.否",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "content": "2、 是否知道服用华法林INR要保持的范围",
+                                            "answer": null,
+                                            "type": 2,
+                                            "child": [
+                                                {
+                                                    "content": "A.是",
+                                                    "answer": null,
+                                                    "type": 4,
+                                                    "child":[]
+                                                },
+                                                {
+                                                    "content": "B.否",
+                                                    "answer": null,
+                                                    "type": 6,
+                                                    "child":[]
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "content": "B.否",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "2、您是否出现下列症状（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.无症状",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.心慌",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.头晕",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.脉率过缓",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.晕厥",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.恶心",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "G.呕吐",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "H.肢体无力",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "I.皮下出血、血便、血尿等",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "J.其他（自行填写）",
+                                    "answer": null,
+                                    "type": 7, 
+                                    "maxLength": 100,
+                                    "child":[]
+                                }
+                            ]
+                        },
+                        {
+                            "content": "3、出院回家后是否出现下列情况（可多选）",
+                            "answer": null,
+                            "type": 3,
+                            "child": [
+                                {
+                                    "content": "A.术侧肢体出现明显渗血",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "B.术侧肢体出现明显肿胀",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "C.术侧肢体出现明显青紫",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "D.术侧肢体出现疼痛",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "E.出现胸痛、胸闷等症状",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "F.未出现任何状况感觉良好",
+                                    "answer": null,
+                                    "type": 6,
+                                    "child":[]
+                                },
+                                {
+                                    "content": "G.其他（自行填写）",
+                                    "answer": null,
+                                    "type": 7, 
+                                    "maxLength": 100,
+                                    "child":[]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "content": "18、您出院后是否有以上未涉及症状或其他迫切需要了解、解决的问题",
+            "answer": null,
+            "type": 5,
+            "code": 18,
+            "maxLength": 50,
+            "child": []
+        }
+    ]
+}
