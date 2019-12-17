@@ -95,12 +95,9 @@
 				06A93E3323A858A60056C4E1 /* AppDelegate.m */,
 				06A93E5823A89E940056C4E1 /* PageController.h */,
 				06A93E5923A89E940056C4E1 /* PageController.m */,
+				78E9616E23A91BCC007A7047 /* Model */,
 				06A93E5B23A8A0230056C4E1 /* QuestionController.h */,
 				06A93E5C23A8A0230056C4E1 /* QuestionController.m */,
-				06A93E5223A86F930056C4E1 /* Question.h */,
-				06A93E5323A86F930056C4E1 /* Question.m */,
-				06A93E5523A8749A0056C4E1 /* Questionnaire.h */,
-				06A93E5623A8749A0056C4E1 /* Questionnaire.m */,
 				0619402D23A8AFCD001DC735 /* View */,
 				06A93E3E23A858A70056C4E1 /* Assets.xcassets */,
 				06A93E4023A858A70056C4E1 /* LaunchScreen.storyboard */,
@@ -118,6 +115,17 @@
 				06A93E4D23A868240056C4E1 /* 心内科随访问卷模版.json */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		78E9616E23A91BCC007A7047 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				06A93E5223A86F930056C4E1 /* Question.h */,
+				06A93E5323A86F930056C4E1 /* Question.m */,
+				06A93E5523A8749A0056C4E1 /* Questionnaire.h */,
+				06A93E5623A8749A0056C4E1 /* Questionnaire.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		96B9CE0F4A80822BB7C6806D /* Frameworks */ = {

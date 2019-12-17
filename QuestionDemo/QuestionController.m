@@ -19,6 +19,12 @@
 
 @implementation QuestionController
 
+-(void)setQuestion:(Question *)question {
+    _question = question;
+    self.prevButtonNode.enabled = !question.head;
+    self.nextButtonNode.enabled = !question.tail;
+}
+
 -(instancetype)init {
     if (self = [super initWithNode:[ASDisplayNode new]]) {
         self.node.automaticallyManagesSubnodes = true;
@@ -50,7 +56,9 @@
 -(ASButtonNode *)prevButtonNode {
     if (!_prevButtonNode) {
         _prevButtonNode = [ASButtonNode new];
-        [_prevButtonNode setTitle:@"上一题" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:nil forState:UIControlStateNormal];
+        [_prevButtonNode setTitle:@"上一题" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:UIColor.blackColor forState:UIControlStateNormal];
+        [_prevButtonNode setTitle:@"上一题" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:UIColor.lightGrayColor forState:UIControlStateDisabled];
+        [_prevButtonNode addTarget:self action:@selector(prevAction:) forControlEvents:ASControlNodeEventTouchUpInside];
     }
     
     return _prevButtonNode;
@@ -59,7 +67,9 @@
 -(ASButtonNode *)nextButtonNode {
     if (!_nextButtonNode) {
         _nextButtonNode = [ASButtonNode new];
-        [_nextButtonNode setTitle:@"下一题" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:nil forState:UIControlStateNormal];
+        [_nextButtonNode setTitle:@"下一题" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:UIColor.blackColor forState:UIControlStateNormal];
+        [_nextButtonNode setTitle:@"下一题" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:UIColor.lightGrayColor forState:UIControlStateDisabled];
+        [_nextButtonNode addTarget:self action:@selector(nextAction:) forControlEvents:ASControlNodeEventTouchUpInside];
     }
     
     return _nextButtonNode;
@@ -68,7 +78,9 @@
 -(ASButtonNode *)confirmButtonNode {
     if (!_confirmButtonNode) {
         _confirmButtonNode = [ASButtonNode new];
-        [_confirmButtonNode setTitle:@"确认提交" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:nil forState:UIControlStateNormal];
+        [_confirmButtonNode setTitle:@"确认提交" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:UIColor.blackColor forState:UIControlStateNormal];
+        [_confirmButtonNode setTitle:@"确认提交" withFont:[UIFont systemFontOfSize:16 weight:UIFontWeightMedium] withColor:UIColor.lightGrayColor forState:UIControlStateDisabled];
+        [_confirmButtonNode addTarget:self action:@selector(confirmAction:) forControlEvents:ASControlNodeEventTouchUpInside];
     }
     
     return _confirmButtonNode;
@@ -132,17 +144,53 @@
      ];
 }
 
+-(NSArray<Question *> *)questions {
+    if (self.question) {
+        NSMutableArray<Question *> *questions = [[NSMutableArray alloc] initWithObjects:self.question, nil];
+        if (self.question.descendants) {
+            [questions addObjectsFromArray:self.question.descendants];
+        }
+        return questions;
+    }
+    return nil;
+}
+
 -(NSInteger)numberOfSectionsInTableNode:(ASTableNode *)tableNode {
     return 1;
 }
 
 -(NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return [[self questions] count];
+}
+
+-(void)tableNode:(ASTableNode *)tableNode didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableNode deselectRowAtIndexPath:indexPath animated:false];
+    [[self questions] objectAtIndex:indexPath.row].selected = ![[self questions] objectAtIndex:indexPath.row].selected;
+    [tableNode reloadData];
 }
 
 - (ASCellNode *)tableNode:(ASTableNode *)tableNode nodeForRowAtIndexPath:(NSIndexPath *)indexPath {
-    QuestionCellNode *cellNode = [QuestionCellNode new];
-    return [cellNode accept:self.question];
+    QuestionCellNode *oldCellNode = [tableNode nodeForRowAtIndexPath:indexPath];
+    QuestionCellNode *cellNode;
+    if ([oldCellNode isMemberOfClass:[QuestionCellNode class]]) {
+        cellNode = oldCellNode;
+    } else {
+        cellNode = [QuestionCellNode new];
+    }
+    return [cellNode accept:[self questions][indexPath.row]];
+}
+
+#pragma mark - Action
+-(void)prevAction:(id)sender {
+    [self.delegate questionController:self performAction:QuestionControllerActionPrev];
+}
+
+-(void)nextAction:(id)sender {
+    [self.delegate questionController:self performAction:QuestionControllerActionNext];
+}
+
+-(void)confirmAction:(id)sender {
+    [self.delegate questionController:self performAction:QuestionControllerActionConfirm];
 }
 
 @end

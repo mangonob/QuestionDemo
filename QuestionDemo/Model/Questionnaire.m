@@ -32,10 +32,22 @@
         [NSData dataWithContentsOfURL: [[NSBundle mainBundle] URLForResource:components[0]
                                                                withExtension:components[1]]];
         
-        return [Questionnaire mj_objectWithKeyValues: [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil]];
+        return [[Questionnaire mj_objectWithKeyValues: [NSJSONSerialization JSONObjectWithData:jsonData options:0 error:nil]]
+                validated];
     }
     
     return nil;
+}
+
+/// 初始化模型
+- (instancetype)validated {
+    [self.que_li firstObject].head = YES;
+    [self.que_li lastObject].tail = YES;
+    [self.que_li enumerateObjectsUsingBlock:^(Question * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        obj.level = 0;
+        [obj validated];
+    }];
+    return self;
 }
 
 @end

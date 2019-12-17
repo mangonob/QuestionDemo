@@ -43,6 +43,12 @@ typedef enum {
 @property (assign, nonatomic) BOOL tail;
 /// 是否是最后一个子节点
 @property (assign, nonatomic) BOOL head;
+/// 父节点
+@property (weak, readonly) Question *parent;
+/// 所有子孙节点
+@property (strong, readonly) NSArray<Question *> *descendants;
+
+- (instancetype)validated;
 
 @end
 

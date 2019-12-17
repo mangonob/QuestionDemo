@@ -44,6 +44,7 @@
 
 -(void)setText:(NSString *)text {
     [self.textNode setAttributedText:[[NSAttributedString alloc] initWithString:text attributes:@{
+        NSFontAttributeName: [UIFont systemFontOfSize:16],
     }]];
 }
 
@@ -51,6 +52,7 @@
 {
     if ([super init]) {
         self.automaticallyManagesSubnodes = true;
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
@@ -66,7 +68,7 @@
     return [ASInsetLayoutSpec
             insetLayoutSpecWithInsets:UIEdgeInsetsMake(0, indentUnit * self.leadingIndentLevel, 0, indentUnit * self.trailingIndentLevel)
             child: [ASInsetLayoutSpec
-                    insetLayoutSpecWithInsets:UIEdgeInsetsMake(8, 8, 8, 8)
+                    insetLayoutSpecWithInsets:UIEdgeInsetsMake(8, 16, 8, 16)
                     child:self.textNode]];
 }
 
