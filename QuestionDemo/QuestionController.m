@@ -165,8 +165,11 @@
 
 -(void)tableNode:(ASTableNode *)tableNode didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableNode deselectRowAtIndexPath:indexPath animated:false];
-    [[self questions] objectAtIndex:indexPath.row].selected = ![[self questions] objectAtIndex:indexPath.row].selected;
-    [tableNode reloadData];
+    Question *question = [[self questions] objectAtIndex:indexPath.row];
+    NSLog(@"选中 %@", question);
+    if ([question interacte]) {
+        [tableNode reloadData];
+    }
 }
 
 - (ASCellNode *)tableNode:(ASTableNode *)tableNode nodeForRowAtIndexPath:(NSIndexPath *)indexPath {

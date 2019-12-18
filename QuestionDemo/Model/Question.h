@@ -12,10 +12,20 @@
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum {
-    /// 单选
-    QuestionTypeSingleChoice,
-    /// 多选
-    QuestionTypeMultiChoice,
+    /// 科室选择题
+    QuestionTypeDepartmentChoice = 1,
+    /// 单选题
+    QuestionTypeSingleChoice = 2,
+    /// 多选题
+    QuestionTypeMultiChoice = 3,
+    /// 带有子题目的选项
+    QuestionTypeOptionWithQuestion = 4,
+    /// 文本输入题
+    QuestionTypeTextInput = 5,
+    /// 选项
+    QuestionTypeOption = 6,
+    /// 文本输入选项
+    QuestionTypeInputOption = 7,
 } QuestionType;
 
 /// 题目
@@ -43,6 +53,8 @@ typedef enum {
 @property (assign, nonatomic) BOOL tail;
 /// 是否是最后一个子节点
 @property (assign, nonatomic) BOOL head;
+/// 是否显示
+@property (assign, nonatomic) BOOL hidden;
 /// 父节点
 @property (weak, readonly) Question *parent;
 /// 所有子孙节点
@@ -50,6 +62,9 @@ typedef enum {
 
 - (instancetype)validated;
 
+- (void)expand:(int)maxDepth;
+- (void)close:(int)maxDepth;
+- (BOOL)interacte;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -45,6 +45,8 @@
     [self.que_li lastObject].tail = YES;
     [self.que_li enumerateObjectsUsingBlock:^(Question * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         obj.level = 0;
+        obj.hidden = false;
+        [obj expand:1];
         [obj validated];
     }];
     return self;
