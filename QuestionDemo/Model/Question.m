@@ -45,6 +45,9 @@
         }
         for (Question *question in self.parent.child) {
             question.selected = NO;
+            if (question != self && question.type == QuestionTypeOptionWithQuestion) {
+                [question close:1];
+            }
         }
         self.selected = YES;
     } else if (self.parent.type == QuestionTypeMultiChoice) {
@@ -117,13 +120,30 @@
     return self;
 }
 
+#pragma mark - 访问者方法
 -(void)visit:(QuestionCellNode *)cell {
-    [cell setText:self.content];
+    [cell setTitle:self.content];
     if (self.level < 3) {
         [cell setIndentLevel:(CGFloat)self.level];
     } else {
         [cell setLeadingIndentLevel:(CGFloat)self.level];
     }
+    
+    [cell setTextHidden:
+     !(
+       self.type == QuestionTypeTextInput ||
+       (self.type == QuestionTypeInputOption && self.selected)
+       )];
+    
+    cell.checkerHidden =
+    (
+     self.type == QuestionTypeSingleChoice ||
+     self.type == QuestionTypeMultiChoice ||
+     self.type == QuestionTypeTextInput ||
+     self.type == QuestionTypeDepartmentChoice
+     );
+    
+    cell.checked = self.selected;
 }
 
 -(NSString *)description {

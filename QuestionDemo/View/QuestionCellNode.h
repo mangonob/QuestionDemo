@@ -7,6 +7,7 @@
 //
 
 #import <AsyncDisplayKit/AsyncDisplayKit.h>
+#import "CheckerNode.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -21,8 +22,18 @@ NS_ASSUME_NONNULL_BEGIN
 @property (assign, nonatomic) CGFloat indentLevel;
 @property (assign, nonatomic) CGFloat leadingIndentLevel;
 @property (assign, nonatomic) CGFloat trailingIndentLevel;
+@property (assign, nonatomic) BOOL textHidden;
+/// 选中按钮是否隐藏
+@property (assign, nonatomic) BOOL checkerHidden;
+@property (copy, nonatomic) NSString* text;
 
--(void)setText:(NSString *)text;
+/// 是否被选中
+@property (assign, nonatomic) BOOL checked;
+
+/// 选中按钮
+@property (strong, readonly) CheckerNode *checkerNode;
+
+-(void)setTitle:(NSString *)title;
 
 -(instancetype)accept:(id <QuestionCellNodeVisitor>)visitor;
 

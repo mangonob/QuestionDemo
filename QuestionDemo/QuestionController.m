@@ -49,6 +49,7 @@
 - (ASTableNode *)tableNode {
     if (!_tableNode) {
         _tableNode = [[ASTableNode alloc] initWithStyle:UITableViewStyleGrouped];
+        _tableNode.view.keyboardDismissMode = UIScrollViewKeyboardDismissModeOnDrag;
     }
     return _tableNode;
 }

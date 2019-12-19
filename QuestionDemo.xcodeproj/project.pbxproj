@@ -19,6 +19,8 @@
 		06A93E5723A8749A0056C4E1 /* Questionnaire.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A93E5623A8749A0056C4E1 /* Questionnaire.m */; };
 		06A93E5A23A89E940056C4E1 /* PageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A93E5923A89E940056C4E1 /* PageController.m */; };
 		06A93E5D23A8A0230056C4E1 /* QuestionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A93E5C23A8A0230056C4E1 /* QuestionController.m */; };
+		06AF800523AB0F3300EC69DB /* Checker.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF800423AB0F3300EC69DB /* Checker.m */; };
+		06AF800823AB132600EC69DB /* CheckerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 06AF800723AB132600EC69DB /* CheckerNode.m */; };
 		DE5CABC231C5BD635ECB758E /* Pods_QuestionDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C992D07622652731ACFDDD95 /* Pods_QuestionDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +45,10 @@
 		06A93E5923A89E940056C4E1 /* PageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PageController.m; sourceTree = "<group>"; };
 		06A93E5B23A8A0230056C4E1 /* QuestionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionController.h; sourceTree = "<group>"; };
 		06A93E5C23A8A0230056C4E1 /* QuestionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionController.m; sourceTree = "<group>"; };
+		06AF800323AB0F3300EC69DB /* Checker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Checker.h; sourceTree = "<group>"; };
+		06AF800423AB0F3300EC69DB /* Checker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Checker.m; sourceTree = "<group>"; };
+		06AF800623AB132600EC69DB /* CheckerNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckerNode.h; sourceTree = "<group>"; };
+		06AF800723AB132600EC69DB /* CheckerNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckerNode.m; sourceTree = "<group>"; };
 		3503E87E7CC0FC1387E3D473 /* Pods-QuestionDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionDemo.debug.xcconfig"; path = "Target Support Files/Pods-QuestionDemo/Pods-QuestionDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		C992D07622652731ACFDDD95 /* Pods_QuestionDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuestionDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E35AA9F1FA5B9F288685EB97 /* Pods-QuestionDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuestionDemo.release.xcconfig"; path = "Target Support Files/Pods-QuestionDemo/Pods-QuestionDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -63,6 +69,10 @@
 		0619402D23A8AFCD001DC735 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				06AF800323AB0F3300EC69DB /* Checker.h */,
+				06AF800423AB0F3300EC69DB /* Checker.m */,
+				06AF800623AB132600EC69DB /* CheckerNode.h */,
+				06AF800723AB132600EC69DB /* CheckerNode.m */,
 				0619402E23A8B050001DC735 /* QuestionCellNode.h */,
 				0619402F23A8B050001DC735 /* QuestionCellNode.m */,
 			);
@@ -282,10 +292,12 @@
 			files = (
 				06A93E5A23A89E940056C4E1 /* PageController.m in Sources */,
 				0619403023A8B050001DC735 /* QuestionCellNode.m in Sources */,
+				06AF800523AB0F3300EC69DB /* Checker.m in Sources */,
 				06A93E5423A86F930056C4E1 /* Question.m in Sources */,
 				06A93E3423A858A60056C4E1 /* AppDelegate.m in Sources */,
 				06A93E5D23A8A0230056C4E1 /* QuestionController.m in Sources */,
 				06A93E4523A858A70056C4E1 /* main.m in Sources */,
+				06AF800823AB132600EC69DB /* CheckerNode.m in Sources */,
 				06A93E5723A8749A0056C4E1 /* Questionnaire.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

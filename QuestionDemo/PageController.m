@@ -59,7 +59,7 @@
         QuestionController *questionController = (QuestionController *)controller;
         Question *question = questionController.question;
         NSUInteger index = [self.quesetionnaire.que_li indexOfObject:question] - 1;
-        if (index && index < self.quesetionnaire.que_li.count) {
+        if (index >= 0 && index < self.quesetionnaire.que_li.count) {
             QuestionController *questionController = [[QuestionController alloc] initWithQuestion:self.quesetionnaire.que_li[index]];
             questionController.delegate = self;
             return questionController;
@@ -73,7 +73,7 @@
         QuestionController *questionController = (QuestionController *)controller;
         Question *question = questionController.question;
         NSUInteger index = [self.quesetionnaire.que_li indexOfObject:question] + 1;
-        if (index && index < self.quesetionnaire.que_li.count) {
+        if (index >= 0  && index < self.quesetionnaire.que_li.count) {
             QuestionController *questionController = [[QuestionController alloc] initWithQuestion:self.quesetionnaire.que_li[index]];
             questionController.delegate = self;
             return questionController;
