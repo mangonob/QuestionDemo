@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CheckerNode : ASControlNode
 
+/// 内部包装的Checker类型的视图
 @property (readonly) Checker *checker;
 
 @end

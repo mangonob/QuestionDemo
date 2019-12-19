@@ -143,6 +143,12 @@
      self.type == QuestionTypeDepartmentChoice
      );
     
+    if (self.parent.type == QuestionTypeSingleChoice) {
+        cell.checkerNode.checker.checkerStyle = CheckerStyleRadio;
+    } else if (self.parent.type == QuestionTypeMultiChoice) {
+        cell.checkerNode.checker.checkerStyle = CheckerStyleChecker;
+    }
+
     cell.checked = self.selected;
 }
 

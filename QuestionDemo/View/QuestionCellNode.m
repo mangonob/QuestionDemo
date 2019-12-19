@@ -17,10 +17,12 @@
 @implementation QuestionCellNode
 
 -(NSString *)text {
-    return nil;
+    return self.textNode.attributedText.string;
 }
 
 -(void)setText:(NSString *)text {
+    self.textNode.attributedText =
+    [[NSAttributedString alloc] initWithString:text attributes:self.textNode.typingAttributes];
 }
 
 -(ASTextNode *)titleNode {
@@ -128,7 +130,7 @@
         self.titleNode.style.flexGrow = 0;
         self.titleNode.style.flexShrink = 0;
     } else {
-        self.checkerNode.style.preferredSize = CGSizeMake(24, 24);
+        self.checkerNode.style.preferredSize = CGSizeMake(18, 18);
         self.titleNode.style.flexGrow = 1;
         self.titleNode.style.flexShrink = 1;
 
