@@ -44,6 +44,12 @@
     self.delegate = self;
     
     self.quesetionnaire = [Questionnaire loadFromJSONFile:@"心内科随访问卷模版.json"];
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                              initWithTitle:@"提交"
+                                              style:UIBarButtonItemStyleDone
+                                              target:self
+                                              action:@selector(confirmAction:)];
 }
 
 #pragma mark - UIPageViewControllerDataSource
@@ -125,32 +131,41 @@
         }
         case QuestionControllerActionConfirm:
         {
-            QuestionnaireConfirmDetails *details = [self.quesetionnaire confirm];
-            if (details.valid) {
-                NSString *answerString = [self.quesetionnaire mj_JSONString];
-                UIAlertController *alert = [UIAlertController
-                                            alertControllerWithTitle:@"提交成功"
-                                            message: answerString
-                                            preferredStyle:UIAlertControllerStyleAlert];
-                [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
-                [self presentViewController:alert animated:true completion:nil];
-                // UIAlertController显示字符串有长度限制，控制台打印一次完整结果
-                printf("%s", [answerString cStringUsingEncoding:NSUTF8StringEncoding]);
-            } else {
-                NSUInteger uncompletedCount = [details uncompletedQuestion].count;
-                UIAlertController *alert = [UIAlertController
-                                            alertControllerWithTitle:@"提示"
-                                            message:[NSString stringWithFormat:@"您还有 %lu 道题未完成，请先完成所有题目。", uncompletedCount]
-                                            preferredStyle:UIAlertControllerStyleAlert];
-                [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
-                NSArray<Question *> *questions = [details firstUncompletedLink];
-                [questions firstObject];
-                [self presentViewController:alert animated:true completion:nil];
-                [[self gotoQuestion:[questions firstObject]] scrollQuestionToVisiable:[questions lastObject]];
-            }
+            [self confirm];
             break;
         }
     };
+}
+
+-(void)confirm {
+    QuestionnaireConfirmDetails *details = [self.quesetionnaire confirm];
+    if (details.valid) {
+        NSString *answerString = [self.quesetionnaire mj_JSONString];
+        UIAlertController *alert = [UIAlertController
+                                    alertControllerWithTitle:@"提交成功"
+                                    message: answerString
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+        [self presentViewController:alert animated:true completion:nil];
+        // UIAlertController显示字符串有长度限制，控制台打印一次完整结果
+        printf("%s", [answerString cStringUsingEncoding:NSUTF8StringEncoding]);
+    } else {
+        NSUInteger uncompletedCount = [details uncompletedQuestion].count;
+        UIAlertController *alert = [UIAlertController
+                                    alertControllerWithTitle:@"提示"
+                                    message:[NSString stringWithFormat:@"您还有 %lu 道题未完成，请先完成所有题目。", (unsigned long)uncompletedCount]
+                                    preferredStyle:UIAlertControllerStyleAlert];
+        [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:nil]];
+        NSArray<Question *> *questions = [details firstUncompletedLink];
+        [questions firstObject];
+        [self presentViewController:alert animated:true completion:nil];
+        [[self gotoQuestion:[questions firstObject]] scrollQuestionToVisiable:[questions lastObject]];
+    }
+}
+
+#pragma mark - Action
+-(void)confirmAction:(id)sender {
+    [self confirm];
 }
 
 @end

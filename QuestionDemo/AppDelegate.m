@@ -19,7 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController: [PageController new]];
+    UINavigationController *controller = [[UINavigationController alloc] initWithRootViewController: [PageController new]];
+    controller.navigationBar.barTintColor = UIColor.whiteColor;
+    self.window.rootViewController = controller;
     [self.window makeKeyAndVisible];
     return YES;
 }

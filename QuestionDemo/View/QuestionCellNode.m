@@ -104,6 +104,7 @@
     if ([super init]) {
         self.automaticallyManagesSubnodes = true;
         self.selectionStyle = UITableViewCellSelectionStyleNone;
+        self.backgroundColor = UIColor.whiteColor;
         // 默认隐藏文本输入框
         self.textHidden = true;
         self.checkerHidden = true;

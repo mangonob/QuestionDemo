@@ -95,6 +95,8 @@
     self.node.backgroundColor = UIColor.whiteColor;
     self.tableNode.delegate = self;
     self.tableNode.dataSource = self;
+    self.tableNode.backgroundColor = UIColor.whiteColor;
+    self.tableNode.view.separatorColor = UIColor.lightGrayColor;
 }
 
 -(void)viewWillAppear:(BOOL)animated {
