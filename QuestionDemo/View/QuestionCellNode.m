@@ -7,8 +7,9 @@
 //
 
 #import "QuestionCellNode.h"
+#import "Question.h"
 
-@interface QuestionCellNode()
+@interface QuestionCellNode() <ASEditableTextNodeDelegate>
 @property (strong, nonatomic) ASTextNode *titleNode;
 @property (strong, nonatomic) ASEditableTextNode *textNode;
 @property (strong, nonatomic) CheckerNode *checkerNode;
@@ -21,8 +22,8 @@
 }
 
 -(void)setText:(NSString *)text {
-    self.textNode.attributedText =
-    [[NSAttributedString alloc] initWithString:text attributes:self.textNode.typingAttributes];
+    self.textNode.attributedText = text ?
+    [[NSAttributedString alloc] initWithString:text attributes:self.textNode.typingAttributes] : nil;
 }
 
 -(ASTextNode *)titleNode {
@@ -110,6 +111,11 @@
     return self;
 }
 
+- (void)didLoad {
+    [super didLoad];
+    self.textNode.delegate = self;
+}
+
 -(instancetype)accept:(id<QuestionCellNodeVisitor>)visitor {
     [visitor visit:self];
     return self;
@@ -158,6 +164,15 @@
             child: [ASInsetLayoutSpec
                     insetLayoutSpecWithInsets:UIEdgeInsetsMake(8, 16, 8, 16)
                     child:contentStack]];
+}
+
+#pragma mark - ASEditableTextNodeDelegate
+-(void)editableTextNodeDidUpdateText:(ASEditableTextNode *)editableTextNode {
+    if ([self.text length]) {
+        self.question.answer = self.text;
+    } else {
+        self.question.answer = nil;
+    }
 }
 
 @end

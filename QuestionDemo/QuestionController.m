@@ -15,6 +15,7 @@
 @property (strong, nonatomic) ASButtonNode *prevButtonNode;
 @property (strong, nonatomic) ASButtonNode *nextButtonNode;
 @property (strong, nonatomic) ASButtonNode *confirmButtonNode;
+@property (strong, nonatomic) Question *questionWillScrollTo;
 @end
 
 @implementation QuestionController
@@ -96,6 +97,11 @@
     self.tableNode.dataSource = self;
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self _scrollQuestionToVisiable:nil];
+}
+
 /*
 #pragma mark - Navigation
 
@@ -108,7 +114,10 @@
 
 -(ASLayoutSpec *)node:(ASDisplayNode *)node layoutSpecThatFits:(ASSizeRange)size {
     self.tableNode.style.flexGrow = 1;
-    
+    self.nextButtonNode.style.height = ASDimensionMakeWithPoints(40);
+    self.prevButtonNode.style.height = ASDimensionMakeWithPoints(40);
+    self.confirmButtonNode.style.height = ASDimensionMakeWithPoints(40);
+
     ASStackLayoutSpec *buttonStack =
     [ASStackLayoutSpec
      stackLayoutSpecWithDirection:ASStackLayoutDirectionHorizontal
@@ -118,8 +127,9 @@
      children: @[]];
     
     if (self.question.tail) {
+        self.confirmButtonNode.style.flexGrow = 1;
+        self.confirmButtonNode.style.flexGrow = 1;
         buttonStack.child = self.confirmButtonNode;
-        buttonStack.justifyContent = ASStackLayoutJustifyContentCenter;
     } else {
         self.prevButtonNode.style.flexGrow = 1;
         self.nextButtonNode.style.flexGrow = 1;
@@ -160,6 +170,14 @@
     return 1;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 0.0001;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0.0001;
+}
+
 -(NSInteger)tableNode:(ASTableNode *)tableNode numberOfRowsInSection:(NSInteger)section {
     return [[self questions] count];
 }
@@ -182,6 +200,24 @@
         cellNode = [QuestionCellNode new];
     }
     return [cellNode accept:[self questions][indexPath.row]];
+}
+
+-(void)_scrollQuestionToVisiable:(nullable Question *)question {
+    Question *questionWillScollTo = question ? question : self.questionWillScrollTo;
+    self.questionWillScrollTo = nil;
+    
+    NSUInteger index = [[self questions] indexOfObject:questionWillScollTo];
+    if (index != NSNotFound) {
+        [self.tableNode scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:index inSection:0] atScrollPosition:UITableViewScrollPositionMiddle animated:true];
+    }
+}
+
+-(void)scrollQuestionToVisiable:(Question *)question {
+    if (self.view.window) {
+        [self _scrollQuestionToVisiable:question];
+    } else {
+        self.questionWillScrollTo = question;
+    }
 }
 
 #pragma mark - Action

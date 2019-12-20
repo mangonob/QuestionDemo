@@ -26,6 +26,17 @@
                 @"child": NSStringFromClass(self),
             };
         }];
+        
+        [self mj_setupAllowedPropertyNames:^NSArray *{
+            return @[
+                @"content",
+                @"answer",
+                @"type",
+                @"code",
+                @"child",
+                @"maxLength",
+            ];
+        }];
     }
 }
 
@@ -50,9 +61,11 @@
             }
         }
         self.selected = YES;
+        [self.parent updateChoiceAnswer];
     } else if (self.parent.type == QuestionTypeMultiChoice) {
         mutatted = YES;
         self.selected = !self.selected;
+        [self.parent updateChoiceAnswer];
     }
     
     if (self.type == QuestionTypeOptionWithQuestion) {
@@ -64,6 +77,20 @@
     }
     
     return mutatted;
+}
+
+/// 更新答案（选择题）
+-(void)updateChoiceAnswer {
+    NSMutableArray<NSString *> *answers = [NSMutableArray new];
+    
+    [self.child enumerateObjectsUsingBlock:^(Question * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if (obj.selected) {
+            [answers addObject: [NSString stringWithFormat:@"%lu", idx]];
+        }
+    }];
+    
+    self.answer = [answers count] ? [answers componentsJoinedByString:@","] : nil;
+    NSLog(@"%@ answer -> \(%@)", self, self.answer);
 }
 
 -(void)expand:(int)maxDepth {
@@ -86,6 +113,42 @@
         question.hidden = true;
         [question close:maxDepth - 1];
     }
+}
+
+-(BOOL)completed {
+    if (self.hidden) {
+        return YES;
+    }
+    
+    if (self.type == QuestionTypeSingleChoice ||
+        self.type == QuestionTypeMultiChoice) {
+        if (![self.answer length]) {
+            return NO;
+        }
+        
+        for (Question *question in self.child) {
+            if (question.selected && !question.completed) {
+                return NO;
+            }
+        }
+        return YES;
+    } else if (self.type == QuestionTypeOptionWithQuestion) {
+        for (Question *question in self.child) {
+            if (!question.completed) {
+                return NO;
+            }
+        }
+        
+        return YES;
+    } else if (self.type == QuestionTypeTextInput) {
+        return [self.answer length];
+    } else if (self.type == QuestionTypeInputOption) {
+        return !self.selected || (self.selected && [self.answer length]);
+    } else if (![self.child count]) {
+        return true;
+    }
+    
+    return NO;
 }
 
 -(NSArray<Question *> *)descendants {
@@ -122,6 +185,8 @@
 
 #pragma mark - 访问者方法
 -(void)visit:(QuestionCellNode *)cell {
+    cell.question = self;
+    
     [cell setTitle:self.content];
     if (self.level < 3) {
         [cell setIndentLevel:(CGFloat)self.level];
@@ -129,12 +194,12 @@
         [cell setLeadingIndentLevel:(CGFloat)self.level];
     }
     
-    [cell setTextHidden:
-     !(
-       self.type == QuestionTypeTextInput ||
-       (self.type == QuestionTypeInputOption && self.selected)
-       )];
+    BOOL withText = self.type == QuestionTypeTextInput ||
+    (self.type == QuestionTypeInputOption && self.selected);
     
+    [cell setTextHidden: !withText];
+    cell.text = withText ? self.answer : nil;
+
     cell.checkerHidden =
     (
      self.type == QuestionTypeSingleChoice ||

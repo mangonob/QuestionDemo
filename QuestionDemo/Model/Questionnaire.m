@@ -9,6 +9,7 @@
 #import "Questionnaire.h"
 #import "Question.h"
 #import <MJExtension/MJExtension.h>
+#import "QuestionnaireConfirmDetails.h"
 
 @implementation Questionnaire
 
@@ -52,4 +53,8 @@
     return self;
 }
 
+/// 提交
+-(QuestionnaireConfirmDetails *)confirm {
+    return [[QuestionnaireConfirmDetails alloc] initWithQuestionnaire:self];
+}
 @end

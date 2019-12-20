@@ -26,6 +26,8 @@ typedef enum {
 @property (assign, nonatomic) BOOL borderWidth;
 /// 选框类型
 @property (assign, nonatomic) CheckerStyle checkerStyle;
+/// 选框颜色
+@property (strong, nonatomic) UIColor *checkerColor;
 
 @end
 

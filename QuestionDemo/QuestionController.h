@@ -40,6 +40,8 @@ typedef enum {
 
 -(instancetype) initWithQuestion:(Question *)question;
 
+-(void) scrollQuestionToVisiable:(Question *)question;
+
 @end
 
 NS_ASSUME_NONNULL_END

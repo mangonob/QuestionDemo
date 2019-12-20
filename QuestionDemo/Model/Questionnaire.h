@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @class Question;
+@class QuestionnaireConfirmDetails;
 
 /// 问卷调查
 @interface Questionnaire : NSObject
@@ -31,6 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
  @return 如果文件存在并合法，则返回Questionnaire实例
  */
 +(nullable instancetype) loadFromJSONFile:(NSString *)filename;
+
+-(nullable QuestionnaireConfirmDetails *)confirm;
 
 @end
 

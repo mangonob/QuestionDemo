@@ -34,7 +34,7 @@ typedef enum {
 /// 题面
 @property (copy, nonatomic) NSString *content;
 /// 答案
-@property (copy, nonatomic) NSString *answer;
+@property (copy, nonatomic, nullable) NSString *answer;
 /// 题目类型
 @property (assign, nonatomic) QuestionType type;
 /// Code
@@ -59,6 +59,8 @@ typedef enum {
 @property (weak, readonly) Question *parent;
 /// 所有子孙节点
 @property (strong, readonly) NSArray<Question *> *descendants;
+/// 是否完成答题
+@property (assign, readonly) BOOL completed;
 
 - (instancetype)validated;
 

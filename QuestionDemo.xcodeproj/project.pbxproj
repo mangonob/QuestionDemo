@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0619403023A8B050001DC735 /* QuestionCellNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 0619402F23A8B050001DC735 /* QuestionCellNode.m */; };
+		068A476523ACA9E7005DF46D /* QuestionnaireConfirmDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 068A476423ACA9E7005DF46D /* QuestionnaireConfirmDetails.m */; };
 		06A93E3423A858A60056C4E1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 06A93E3323A858A60056C4E1 /* AppDelegate.m */; };
 		06A93E3F23A858A70056C4E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06A93E3E23A858A70056C4E1 /* Assets.xcassets */; };
 		06A93E4223A858A70056C4E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06A93E4023A858A70056C4E1 /* LaunchScreen.storyboard */; };
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		0619402E23A8B050001DC735 /* QuestionCellNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionCellNode.h; sourceTree = "<group>"; };
 		0619402F23A8B050001DC735 /* QuestionCellNode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionCellNode.m; sourceTree = "<group>"; };
+		068A476323ACA9E7005DF46D /* QuestionnaireConfirmDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuestionnaireConfirmDetails.h; sourceTree = "<group>"; };
+		068A476423ACA9E7005DF46D /* QuestionnaireConfirmDetails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuestionnaireConfirmDetails.m; sourceTree = "<group>"; };
 		06A93E2F23A858A60056C4E1 /* QuestionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuestionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06A93E3223A858A60056C4E1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		06A93E3323A858A60056C4E1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -134,6 +137,8 @@
 				06A93E5323A86F930056C4E1 /* Question.m */,
 				06A93E5523A8749A0056C4E1 /* Questionnaire.h */,
 				06A93E5623A8749A0056C4E1 /* Questionnaire.m */,
+				068A476323ACA9E7005DF46D /* QuestionnaireConfirmDetails.h */,
+				068A476423ACA9E7005DF46D /* QuestionnaireConfirmDetails.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				06A93E3423A858A60056C4E1 /* AppDelegate.m in Sources */,
 				06A93E5D23A8A0230056C4E1 /* QuestionController.m in Sources */,
 				06A93E4523A858A70056C4E1 /* main.m in Sources */,
+				068A476523ACA9E7005DF46D /* QuestionnaireConfirmDetails.m in Sources */,
 				06AF800823AB132600EC69DB /* CheckerNode.m in Sources */,
 				06A93E5723A8749A0056C4E1 /* Questionnaire.m in Sources */,
 			);

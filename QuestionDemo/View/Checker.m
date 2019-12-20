@@ -12,17 +12,12 @@
 
 -(instancetype)init {
     if (self = [super init]) {
-        self.tintColor = UIColor.blueColor;
+        self.checkerColor = UIColor.blueColor;
         self.borderWidth = 1;
         self.backgroundColor = UIColor.clearColor;
     }
     
     return self;
-}
-
--(void)setTintColor:(UIColor *)tintColor {
-    [super setTintColor:tintColor];
-    [self setNeedsDisplay];
 }
 
 -(void)setSelected:(BOOL)selected {
@@ -67,7 +62,7 @@
         CGFloat border = self.borderWidth * scaleRate * 2;
         [path addClip];
         path.lineWidth = border;
-        [self.tintColor setStroke];
+        [self.checkerColor setStroke];
         [path stroke];
         
         if (self.selected) {
@@ -75,7 +70,7 @@
             {
                 CGFloat scale = 1 - (self.borderWidth + 2) * scaleRate;
                 CGContextScaleCTM(context, scale, scale) ;
-                [self.tintColor setFill];
+                [self.checkerColor setFill];
                 [path fill];
             }
             CGContextRestoreGState(context);
@@ -98,7 +93,7 @@
         CGFloat border = self.borderWidth * scaleRate * 2;
         [path addClip];
         path.lineWidth = border;
-        [self.tintColor setStroke];
+        [self.checkerColor setStroke];
         [path stroke];
         
         if (self.selected) {
@@ -106,7 +101,7 @@
             {
                 CGFloat scale = 1 - (self.borderWidth + 2) * scaleRate;
                 CGContextScaleCTM(context, scale, scale) ;
-                [self.tintColor setFill];
+                [self.checkerColor setFill];
                 [path fill];
             }
             CGContextRestoreGState(context);

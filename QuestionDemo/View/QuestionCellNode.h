@@ -11,6 +11,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class Question;
 @class QuestionCellNode;
 
 @protocol QuestionCellNodeVisitor
@@ -36,6 +37,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 选中按钮
 @property (strong, readonly) CheckerNode *checkerNode;
+
+/// 对模型的弱引用
+@property (weak, nonatomic) Question *question;
 
 /// 设置标题
 -(void)setTitle:(NSString *)title;
